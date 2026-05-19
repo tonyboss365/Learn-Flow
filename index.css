@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@0;1&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", serif;
+  --font-display: "Outfit", sans-serif;
+
+  /* Theme colors - light mode default */
+  --color-claude-bg: #F9F7F2;
+  --color-claude-surface: #FFFFFF;
+  --color-claude-text: #1D1D1D;
+  --color-claude-accent: #AE5633;
+  --color-claude-secondary: #3D3929;
+  --color-claude-border: #E8E2D6;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-claude-bg text-claude-text font-sans antialiased transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.markdown-body {
+  @apply font-sans leading-relaxed text-claude-text/90;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-serif mt-6 mb-4;
+}
+
