@@ -3,6 +3,7 @@
 </p>
 
 <h1 align="center">LearnFlow AI</h1>
+<h1 align="center">Live link: learn-flow-kappa.vercel.app</h1>
 
 <p align="center">
   <b>An AI-Powered Learning Management System built with React, Supabase & OpenRouter AI</b>
